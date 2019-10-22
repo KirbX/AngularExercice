@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true, 
+                'list-group-item-success': post.loveIts > 0,
+               'list-group-item-danger': post.loveIts < 0}">
+
+    <div id="main">
+        <div id="dateFormat"> {{post.createdAt | date: 'dd/mm/yyyy, hh:mm aa'}}</div>
+        <h2 id="titleFormat"> <b>{{post.title}}</b> </h2>
+    </div>
+    <div>{{post.content}}</div>
+    <button style="background-color:green; color:white" (click)="onLove()">Love me maybe</button>
+    <button style="background-color:red; color:white"(click)="onNoLove()">Don't like me baby</button>
+</li>
